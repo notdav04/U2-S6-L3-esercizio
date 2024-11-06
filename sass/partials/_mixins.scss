@@ -1,0 +1,27 @@
+@mixin title_big() {
+  font-weight: bolder;
+  font-size: 7rem;
+}
+
+@mixin floating($border-rad: 5x, $shadow: 0px 0px 10px black, $border: none) {
+  border-radius: $border-rad;
+  box-shadow: $shadow;
+  border: $border;
+}
+
+@mixin grid($element) {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  @if $element ==2 {
+    img {
+      width: 45%;
+    }
+  }
+  @if $element ==4 {
+    img {
+      width: 20%;
+    }
+  }
+}

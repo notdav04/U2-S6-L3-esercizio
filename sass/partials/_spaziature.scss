@@ -1,0 +1,26 @@
+$dimensions: (
+  sm: 4px,
+  normal: 8px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px,
+  xxl: 40px,
+);
+
+$directions: block, inline;
+
+@each $dimension, $value in $dimensions {
+  @each $direction in $directions {
+    .padding-#{$direction}-#{$dimension} {
+      padding-#{$direction}: $value;
+    }
+  }
+}
+
+@each $dimension, $value in $dimensions {
+  @each $direction in $directions {
+    .margin-#{$direction}-#{$dimension} {
+      margin-#{$direction}: $value;
+    }
+  }
+}

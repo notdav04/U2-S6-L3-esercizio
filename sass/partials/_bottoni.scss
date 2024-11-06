@@ -1,0 +1,15 @@
+@import "./colori";
+
+// @each $color in $button-color {
+//   .btn-#{$color} {
+//     background-color: $color;
+//   }
+// }
+
+@for $i from 1 to 4 {
+  .btn-#{$i} {
+    background-color: map-get($button-color, $i);
+    border: none;
+    border-radius: 5px;
+  }
+}
